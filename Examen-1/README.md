@@ -232,8 +232,6 @@ npm run preview
 
 ## 6. Video de sustentación
 
-`PEGAR_AQUÍ_EL_LINK`
-
-El guion usado está en [`docs/guion-sustentacion.md`](docs/guion-sustentacion.md).
+https://youtu.be/CPQx8MC3Ehw
 
 ```
