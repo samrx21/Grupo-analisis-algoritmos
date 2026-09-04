@@ -1,0 +1,18 @@
+{
+  "name": "taller-moto-greedy",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Agenda de un taller de motos resuelta con un algoritmo Greedy de seleccion de actividades",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.13",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "vite": "^7.1.4"
+  }
+}

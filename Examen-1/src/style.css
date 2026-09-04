@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Estilos de apoyo. Todo lo demas se resuelve con clases de Tailwind. */
+html {
+  scroll-behavior: smooth;
+}
+
+.barra-servicio {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+
+.barra-servicio:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgb(15 23 42 / 0.18);
+}
