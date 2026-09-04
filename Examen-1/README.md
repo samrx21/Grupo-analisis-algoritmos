@@ -236,11 +236,4 @@ npm run preview
 
 El guion usado está en [`docs/guion-sustentacion.md`](docs/guion-sustentacion.md).
 
-## 7. Reparto de trabajo
-
-El detalle de qué implementó cada integrante está en
-[`docs/plan-de-commits.md`](docs/plan-de-commits.md) y se puede verificar con:
-
-```bash
-git log --pretty=format:"%h %an %s"
 ```
