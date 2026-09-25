@@ -148,3 +148,54 @@ Examen 2/
   algoritmo no necesita ningún caso especial.
 
 ---
+
+## 4. Resultados
+
+Caso de ejemplo: **Taller (Laureles) → Envigado**.
+
+| Algoritmo | Minimiza | Tramos | Minutos | Ruta |
+|---|---|---|---|---|
+| **Dijkstra** | Tiempo | 4 | **34** | Taller → Belén → Guayabal → El Poblado → Envigado |
+| BFS | Tramos | 3 | 39 | Taller → Belén → Itagüí → Envigado |
+
+- Dijkstra terminó en **13 iteraciones** de 14 nodos posibles: Sabaneta nunca llegó a
+  ser definitiva porque el destino salió antes de la cola.
+- BFS encuentra un camino con una vía menos, pero **5 minutos más lento**, porque pasa
+  por Belén → Itagüí (18 min). Menos tramos no significa menos tiempo.
+
+### Momentos clave de la traza
+
+| Iteración | Sale de la cola | Qué pasa |
+|---|---|---|
+| 1 | Taller (0) | Descubre Estadio (5), Belén (9) y Centro (12) |
+| 2 | Estadio (5) | **Centro mejora de 12 a 11** pasando por el Estadio |
+| 3 | Belén (9) | Descubre Guayabal (17) e Itagüí (27) |
+| 6 | Guayabal (17) | El Poblado mejora de 29 a 26; Itagüí de 27 a 24 |
+| 10 | Itagüí (24) | Envigado aparece por primera vez con 36 |
+| 11 | El Poblado (26) | **Envigado mejora de 36 a 34** |
+| 13 | Envigado (34) | Sale el destino: el algoritmo termina |
+
+### Escenario con vía cerrada
+
+Cerrando **Guayabal — El Poblado**, Dijkstra recalcula y encuentra
+Taller → Belén → Guayabal → Itagüí → Envigado en **36 minutos**.
+
+---
+
+## 5. Cómo ejecutarlo
+
+Requisitos: Node.js 20 o superior.
+
+```bash
+cd "Examen 2"
+npm install        # o pnpm install
+npm run dev
+```
+
+Abre `http://localhost:5173`.
+
+```bash
+npm run build      # valida tipos con tsc y compila con Vite
+```
+
+---
