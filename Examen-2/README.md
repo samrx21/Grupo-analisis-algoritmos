@@ -11,7 +11,7 @@ Opción seleccionada: **Opción 1 – Desarrollo web**.
 | **Estructuras** | Lista de adyacencia · Cola de prioridad (min-heap propio) |
 | **Comparación** | BFS (búsqueda en anchura) |
 | **Tecnologías** | TypeScript, Vite, Tailwind CSS v4 |
-| **Video de sustentación** | `PEGAR_AQUÍ_EL_LINK` |
+| **Video de sustentación** | https://youtu.be/NZ6NeUQbbTs |
 
 ---
 
