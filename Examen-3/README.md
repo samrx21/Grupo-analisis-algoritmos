@@ -9,7 +9,7 @@ Opción seleccionada: **Opción 1 – Desarrollo web**.
 | **Integrantes** | Samuel Metaute Restrepo · Cadavid |
 | **Algoritmo** | Programación Dinámica — *Weighted Interval Scheduling* |
 | **Tecnologías** | TypeScript, Vite, Tailwind CSS v4 |
-| **Video de sustentación** | `PEGAR_AQUÍ_EL_LINK` |
+| **Video de sustentación** | `https://youtu.be/1S1Om-tkwhw` |
 
 ---
 
