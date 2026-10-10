@@ -170,3 +170,56 @@ for (let i = 1; i <= n; i++) {
   dp[i] = Math.max(saltar, tomar);
 }
 ```
+
+## 4. Resultados
+
+Con las 12 solicitudes del ejemplo:
+
+| Estrategia | Motos | Facturación | Frente al óptimo |
+|---|---|---|---|
+| **Programación dinámica** | **3** | **$1.150.000** | **óptimo** |
+| Greedy "el que termine primero" (Examen 1) | 7 | $785.000 | − $365.000 |
+| Greedy "el que deje más plata" | 2 | $880.000 | − $270.000 |
+
+- **Agenda óptima:** S02 Reparación de motor (07:30–11:30, $480.000) → S07 Pintura de
+  tanque (11:30–14:00, $320.000) → S12 Mantenimiento mayor (15:30–18:00, $350.000).
+- **Verificación:** la fuerza bruta revisa los **4.096** subconjuntos (2¹²) y confirma
+  que el máximo es $1.150.000, igual a `dp[12]`.
+- **Costo:** la recursión sin memoria hace **611** llamadas; la tabla resuelve cada
+  subproblema una sola vez.
+- **Lección:** el greedy del Examen 1 atiende más motos, pero factura $365.000 menos.
+  Cambiar el objetivo cambia el algoritmo.
+
+### Tabla completa
+
+| i | Servicio | p(i) | Saltar `dp[i−1]` | Tomar `ingreso + dp[p(i)]` | `dp[i]` |
+|---|---|---|---|---|---|
+| 0 | — | — | — | — | 0 |
+| 1 | S01 08:00–09:00 · 85k | 0 | 0 | 85k | 85k |
+| 2 | S03 09:00–10:00 · 95k | 1 | 85k | 180k | 180k |
+| 3 | S04 09:30–11:00 · 150k | 1 | 180k | 235k | 235k |
+| 4 | S05 10:00–11:00 · 70k | 2 | 235k | 250k | 250k |
+| 5 | S02 07:30–11:30 · 480k | 0 | 250k | 480k | 480k |
+| 6 | S06 11:00–12:30 · 180k | 4 | 480k | 430k | 480k |
+| 7 | S08 12:30–13:30 · 120k | 6 | 480k | 600k | 600k |
+| 8 | S07 11:30–14:00 · 320k | 5 | 600k | 800k | 800k |
+| 9 | S10 13:30–15:00 · 160k | 7 | 800k | 760k | 800k |
+| 10 | S09 13:00–16:00 · 400k | 6 | 800k | 880k | 880k |
+| 11 | S11 15:00–16:00 · 75k | 9 | 880k | 875k | 880k |
+| 12 | S12 15:30–18:00 · 350k | 9 | 880k | 1.150k | **1.150k** |
+
+---
+
+## 5. Cómo ejecutarlo
+
+Requisitos: Node.js 20 o superior.
+
+```bash
+cd "Examen 3"
+npm install        # o pnpm install
+npm run dev
+```
+
+Abre `http://localhost:5173`. Para validar tipos y compilar: `npm run build`.
+
+---
